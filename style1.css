@@ -1,0 +1,103 @@
+*
+{
+margin: 0;
+padding: 0;
+}
+
+#nav-bar
+{
+posistion: sticky;
+top: 0;
+z-index:10;
+}
+.navbar-brand img
+{
+height: 80px;
+padding-left: 30px;
+}
+.navbar-nav li
+{
+   padding: 0 10px;
+}
+.navbar-nav li a
+{
+   float: right;
+   text-align:left;
+}
+#nav-bar ul li a:hover
+{
+      color:  #FFA500!important;
+}
+.navbar
+{
+background: #000000;
+}
+.navbar-toggler
+{
+border: none!important;
+}
+.nav-link
+{
+color: #555!important;
+font-weight:600;
+font-size:16px;
+}
+#slide
+{
+width:100%;
+}
+.carousel-caption
+{
+top:30%;
+text-align:left;
+transform:transalate(-50%);
+bottom: initial!important;
+}
+.carousel-caption h5
+{
+color: #000000;
+font-size:52px;
+}
+#about hari
+{
+     padding-top:50px;
+     padding-bottom:50px; 
+     color:#555;
+}
+#about hari.btn
+{
+ margin-top:20px;
+ margin-bottom:30px;
+}
+.about-content
+{
+padding-top:20px;
+
+}
+#projects
+{
+background-image:linear-
+gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(img/projects.jpg);
+background-size:cover;
+background-posistion:center;
+color:#efefef!important;
+background-attachment:fixed;
+padding-top:25px;
+padding-bottom:25px;
+}
+#projects h1
+{
+text-align:center;
+color:#800000 !important;
+padding-bottom: 10px;
+}
+#projects h1::after
+{
+content:'';
+background:#000000;
+display block;
+height: 3px;
+width :170px;
+margin:20px auto 5px;
+
+}

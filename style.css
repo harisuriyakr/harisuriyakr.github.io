@@ -116,6 +116,11 @@ header
     width: 150px;
     height: auto;
 }
+@media all and (orientation:portrait) {
+    #info {
+         display: block;
+    }
+}
 
 
 

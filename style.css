@@ -68,9 +68,12 @@ h1
 header
 {
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(pic1.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+      height: 100%;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .button
 {

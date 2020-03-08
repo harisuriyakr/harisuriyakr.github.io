@@ -68,16 +68,19 @@ h1
 header
 {
       height: 100%;
-background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(pic.png);
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .button
 {
     margin-top: 30px;
     margin-left: 440px;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .btn

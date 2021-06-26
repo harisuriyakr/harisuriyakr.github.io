@@ -1,17 +1,25 @@
 <?php
-if(!empty($_POST["send"])) {
-	$name = $_POST["userName"];
-	$email = $_POST["userEmail"];
-	$subject = $_POST["subject"];
-	$content = $_POST["content"];
 
-	$conn = mysqli_connect("localhost", "root", "test", "blog_samples") or die("Connection Error: " . mysqli_error($conn));
-	mysqli_query($conn, "INSERT INTO tblcontact (user_name, user_email,subject,content) VALUES ('" . $name. "', '" . $email. "','" . $subject. "','" . $content. "')");
-	$insert_id = mysqli_insert_id($conn);
-	//if(!empty($insert_id)) {
-	   $message = "Your contact information is saved successfully.";
-	   $type = "success";
-	//}
+//Make sure that it is a POST request.
+if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') != 0){
+    throw new Exception('Request method must be POST!');
 }
-require_once "contact-view.php";
-?>
+
+//Make sure that the content type of the POST request has been set to application/json
+$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+if(strcasecmp($contentType, 'application/json') != 0){
+    throw new Exception('Content type must be: application/json');
+}
+
+//Receive the RAW post data.
+$content = trim(file_get_contents("php://input"));
+
+//Attempt to decode the incoming RAW post data from JSON.
+$decoded = json_decode($content, true);
+
+//If json_decode failed, the JSON is invalid.
+if(!is_array($decoded)){
+    throw new Exception('Received content contained invalid JSON!');
+}
+echo $JSON ;
+echo "Connected to json  ";

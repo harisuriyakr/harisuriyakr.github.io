@@ -2,7 +2,7 @@
 "commands":[
 "3/0 P_RESET",
 "3/0 P_SPEEDSELECTION  AUTO",
-"3/0 P_COMMENT  "Port number 0" ",
+"3/0 P_COMMENT  Port number 0 ",
 "3/0 P_TXENABLE  ON",
 "3/0 P_INTERFRAMEGAP  20",
 "3/0 P_FLASH  OFF",
@@ -46,7 +46,7 @@
 "3/0 PS_INDICES  0",
 "3/0 PS_ENABLE  [0]  ON",
 "3/0 PS_PACKETLIMIT  [0]  0",
-"3/0 PS_COMMENT  [0]  "Stream number 0" ",
+"3/0 PS_COMMENT  [0]  Stream number 0 ",
 "3/0 PS_RATEFRACTION  [0]  100000",
 "3/0 PS_BURST  [0]  -1 100",
 "3/0 PS_BURSTGAP  [0]  0 0",

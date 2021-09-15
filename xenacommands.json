@@ -1,4 +1,4 @@
-{"logon":"C_LOGON""password":"xena"
+{"logon":"C_LOGON","password":"xena",
 "commands":[
 "3/0 P_RESET"
 "3/0 P_SPEEDSELECTION  AUTO"

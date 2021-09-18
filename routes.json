@@ -2,9 +2,11 @@
     "chennai": {
         "vellore": [
             {"distance":"120", "cost":300}
+            {"busnumber":"vlr1","type":"express"}
         ],
          "bangalore": [
             {"distance":"220", "cost":500}
+            {"busnumber":"Bgl615","type":"express"}
         ]
         
        

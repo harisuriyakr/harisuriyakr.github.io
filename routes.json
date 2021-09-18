@@ -1,10 +1,12 @@
 {
     "chennai": {
-        "distance": [
-            {"vellore":"120", "cost":300},
-            {"bangalore":"300", "cost":500},
-            {"hyderbad":"500", "cost":1230}
+        "vellore": [
+            {"distance":"120", "cost":300}
+        ],
+         "bangalore": [
+            {"distance":"220", "cost":500}
         ]
+        
        
     }
 }

@@ -11,19 +11,6 @@
         
         
        
-    },
-     "goa": {
-        "vellore": [
-            {"distance":none, "cost":none },
-            {"busnumber":"vlr1","type":"express"}
-        ],
-         "bangalore": [
-            {"distance":none, "cost":none },
-            {"busnumber":"Bgl615","type":"express"}
-        ]
-        
-        
-       
     }
     
     

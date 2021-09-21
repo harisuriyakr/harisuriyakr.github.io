@@ -14,11 +14,11 @@
     },
      "goa": {
         "vellore": [
-            {"distance":" ", "cost":none },
+            {"distance":none, "cost":none },
             {"busnumber":"vlr1","type":"express"}
         ],
          "bangalore": [
-            {"distance":" ", "cost":none },
+            {"distance":none, "cost":none },
             {"busnumber":"Bgl615","type":"express"}
         ]
         

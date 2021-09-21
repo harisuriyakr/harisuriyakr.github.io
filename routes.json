@@ -7,7 +7,7 @@
          "bangalore": [
             {"distance":"220", "cost":500.00},
             {"busnumber":"Bgl615","type":"express"}
-        ],
+        ]
         
         
        
@@ -20,7 +20,7 @@
          "bangalore": [
             {"distance":" ", "cost": },
             {"busnumber":"Bgl615","type":"express"}
-        ],
+        ]
         
         
        

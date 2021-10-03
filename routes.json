@@ -7,11 +7,11 @@
          "bangalore": [
             {"distance":"220", "cost":500.00},
             {"busnumber":"Bgl615","type":"express","uid":"654"}
-        ]
+        ],
              "hyderabad": [
             {"distance":"720", "cost":1000.00},
             {"busnumber":"hyd320","type":"express","uid":"76554"}
-        ]
+        ],
             "delhi": [
             {"distance":"1020", "cost":2000.00},
             {"busnumber":"del220","type":"express","uid":"7765554"}

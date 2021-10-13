@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Eticket</title>
+
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<meta charset="utf-8">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+<!-----NavigationBar----->
+<section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" "><img src="elogo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</section>
+
+ <div class="container">
+<div class="header">
+ <h1>From To Address</h1>
+ </div>
+
+ <form name="login" onsubmit="return validateForm() ;" method="post">
+
+ <ul>
+ <li>From <input class="username" type="text" name="username">
+ </li>
+
+ <li>To <input class="password" type="text" name="password">
+ </li>
+ </ul>
+
+<input type="button" class="submit" value="BOOK!" name="submit" onclick="validate()">
+<input type="button" class="submit" value="BACK" name="submit" onclick="window.location.href='eticket.html'">
+</form>
+</div>
+
+<script>
+var count= 2;
+function validate()
+{
+	var un = document.login.username.value;
+	var pw = document.login.password.value;
+	var valid = false;
+	var usernameArray = ["chennai", "bangalore"];
+	var passwordArray = ["bangalore", "chennai"];
+	for (var i = 0; i < usernameArray.length; i++)
+ {
+	if ((un == usernameArray[i]) && (pw == passwordArray[i]))
+	{
+		valid = true;
+		break;
+	}
+}
+	if (valid)
+	{
+		alert("Pay and getticker");
+		window.location = "gmappayticket.html";
+		return false;
+	}
+	var again = " tries";
+	if (count ==1)
+	{
+		again = " try"
+	}
+	if (count >= 1)
+	{
+		alert("cant find from to address!!!!!!!!!!!!!!!!!!!!")
+		count--;
+	}
+	else
+	{
+		alert("login again");
+		document.login.username.value = "login again";
+		document.login.password.value = "Fool you can't see this";
+		document.login.username.disabled = true;
+		document.login.password.disabled = true;
+		return false;
+	}
+}
+</script>
+                        <div class="footer">
+  <p>&copy2021Developed by<a href="https://harisuriyakr.github.io"> Harisuriya K.R</a></p>
+
+</div> 
+</body>
+</html>

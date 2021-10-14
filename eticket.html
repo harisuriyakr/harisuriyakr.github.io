@@ -15,7 +15,7 @@
 <!-----NavigationBar----->
 <section id="nav-bar">
 <nav class="navbar navbar-expand-lg navbar-light ">
-  <a class="navbar-brand" "><img src="elogo.PNG"></a>
+  <a class="navbar-brand" "><img src="elogo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -49,6 +49,8 @@ function validate()
 	var valid = false;
 	var usernameArray = ["hari", "suriya"];
 	var passwordArray = ["12345", "54321"];
+	var admin = "admin"
+	var adpass = "123"
 	for (var i = 0; i < usernameArray.length; i++)
  {
 	if ((un == usernameArray[i]) && (pw == passwordArray[i]))
@@ -56,11 +58,18 @@ function validate()
 		valid = true;
 		break;
 	}
+	
 }
+	if ((un == admin) &&(pw == adpass ))
+	{
+		alert("Hello admin entering Administrative privelages");
+		window.location = "admin.html";
+		return false;
+	}
 	if (valid)
 	{
 		alert("Login was successful");
-		window.location = "fromto";
+		window.location = "fromto.html";
 		return false;
 	}
 	var again = " tries";

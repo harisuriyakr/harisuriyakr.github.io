@@ -1,0 +1,80 @@
+;
+; hi1.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System ; TODO: specify appropriate Class
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=hi1.cat
+DriverVer = 02/02/2022,21.52.46.921
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+hi1_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+hi1.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%hi1.DeviceDesc%=hi1_Device, Root\hi1 ; TODO: edit hw-id
+
+[hi1_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+hi1.sys
+
+;-------------- Service installation
+[hi1_Device.NT.Services]
+AddService = hi1,%SPSVCINST_ASSOCSERVICE%, hi1_Service_Inst
+
+; -------------- hi1 driver install sections
+[hi1_Service_Inst]
+DisplayName    = %hi1.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\hi1.sys
+
+;
+;--- hi1_Device Coinstaller installation ------
+;
+
+[hi1_Device.NT.CoInstallers]
+AddReg=hi1_Device_CoInstaller_AddReg
+CopyFiles=hi1_Device_CoInstaller_CopyFiles
+
+[hi1_Device_CoInstaller_AddReg]
+;
+
+
+[hi1_Device_CoInstaller_CopyFiles]
+;
+
+
+[hi1_Device.NT.Wdf]
+KmdfService =  hi1, hi1_wdfsect
+[hi1_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "hi1 Installation Disk"
+hi1.DeviceDesc = "hi1 Device"
+hi1.SVCDESC = "hi1 Service"
